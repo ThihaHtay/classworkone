@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+    android:id="@+id/center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Our Team"
+    android:textSize="26sp"
+    android:textAlignment="center"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    />
+<androidx.cardview.widget.CardView
+    android:id="@+id/lion"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    app:cardCornerRadius="60dp"
+    android:layout_marginTop="50dp"
+    app:cardPreventCornerOverlap="false"
+    app:layout_constraintHorizontal_chainStyle="spread"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@id/cat"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lion" />
+</androidx.cardview.widget.CardView>
+
+ <androidx.cardview.widget.CardView
+     android:id="@+id/cat"
+     android:layout_width="100dp"
+     android:layout_height="100dp"
+     app:cardCornerRadius="60dp"
+     android:layout_marginTop="50dp"
+     app:cardPreventCornerOverlap="false"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintRight_toLeftOf="@id/tom"
+     app:layout_constraintLeft_toRightOf="@id/lion">
+
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scaleType="centerCrop"
+         android:src="@drawable/cat"/>
+ </androidx.cardview.widget.CardView>
+
+ <androidx.cardview.widget.CardView
+     android:id="@+id/tom"
+     android:layout_width="100dp"
+     android:layout_height="100dp"
+     android:layout_marginTop="50dp"
+     app:cardCornerRadius="60dp"
+     app:cardPreventCornerOverlap="false"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintLeft_toRightOf="@id/cat">
+     <ImageView
+
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@drawable/tom"
+         android:scaleType="centerCrop"/>
+ </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txtlion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lion"
+        android:textColor="#DD1F1F"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/lion"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/txtcat"/>
+    <TextView
+        android:id="@+id/txtcat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cat"
+        android:textColor="#DD1F1F"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/cat"
+        app:layout_constraintLeft_toRightOf="@id/txtlion"
+        app:layout_constraintRight_toLeftOf="@id/txttom"/>
+    <TextView
+        android:id="@+id/txttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Tom"
+        android:textColor="#DD1F1F"
+        app:layout_constraintTop_toBottomOf="@id/tom"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtcat"/>
+ <androidx.cardview.widget.CardView
+     android:id="@+id/pinguan"
+     android:layout_width="100dp"
+     android:layout_height="100dp"
+     app:cardCornerRadius="60dp"
+     android:layout_marginTop="40dp"
+     app:cardPreventCornerOverlap="false"
+     app:layout_constraintHorizontal_chainStyle="spread"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/txtlion"
+     app:layout_constraintRight_toLeftOf="@id/wolf">
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@drawable/pinguan"
+         android:scaleType="centerCrop"/>
+ </androidx.cardview.widget.CardView>
+
+ <androidx.cardview.widget.CardView
+     android:id="@+id/wolf"
+     android:layout_width="100dp"
+     android:layout_height="100dp"
+     android:layout_marginTop="40dp"
+     app:cardPreventCornerOverlap="false"
+     app:cardCornerRadius="60dp"
+     app:layout_constraintTop_toBottomOf="@id/txtcat"
+     app:layout_constraintLeft_toRightOf="@id/pinguan"
+     app:layout_constraintRight_toLeftOf="@id/dog"
+     >
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@drawable/wolf"
+         android:scaleType="centerCrop"/>
+
+ </androidx.cardview.widget.CardView>
+
+ <androidx.cardview.widget.CardView
+     android:id="@+id/dog"
+     android:layout_width="100dp"
+     android:layout_height="100dp"
+     android:layout_marginTop="40dp"
+     app:cardCornerRadius="60dp"
+     app:cardPreventCornerOverlap="false"
+     app:layout_constraintTop_toBottomOf="@id/txttom"
+     app:layout_constraintLeft_toRightOf="@id/wolf"
+     app:layout_constraintRight_toRightOf="parent">
+     <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@drawable/dog"
+         android:scaleType="centerCrop"/>
+
+ </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtpingn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pingun"
+        android:textColor="#D3146C"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.214"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/txtdog"
+        app:layout_constraintTop_toBottomOf="@id/pinguan" />
+
+    <TextView
+        android:id="@+id/txtwolf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wolf"
+        android:textSize="20sp"
+        android:textColor="#D3146C"
+        app:layout_constraintTop_toBottomOf="@id/wolf"
+        app:layout_constraintLeft_toRightOf="@id/txtpingn"
+        app:layout_constraintRight_toLeftOf="@id/txtdog"
+        />
+    <TextView
+        android:id="@+id/txtdog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dog"
+        android:textSize="20sp"
+        android:textColor="#D3146C"
+        app:layout_constraintTop_toBottomOf="@id/dog"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtwolf"
+        />
+    <TextView
+        android:id="@+id/living"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Living"
+        android:textSize="26sp"
+        android:textAlignment="center"
+        android:textColor="#243FEE"
+        app:layout_constraintTop_toBottomOf="@id/txtwolf"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/txtexam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+         android:textColor="#3A1A9C"
+        android:text="All animals including humans living together in our earth. But humans are control our earlth and forget for animal,humans destory environment where animals live and eat.They hunt animals for eat and cut trees and build industrical zones. "
+        app:layout_constraintTop_toBottomOf="@id/living"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
